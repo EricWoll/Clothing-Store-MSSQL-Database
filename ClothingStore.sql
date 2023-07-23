@@ -1,6 +1,9 @@
 USE [master];
 GO
 -- create database
+/*
+NOTE: This database is set up for Windows, if you have a different Operating System you will need to change the FILENAME path.
+*/
 CREATE DATABASE [ClothingStore]
  ON ( NAME = N'ClothingBrand', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\ClothingBrand.mdf' , SIZE = 8192KB , FILEGROWTH = 65536KB )
  LOG ON ( NAME = N'ClothingBrand_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\ClothingBrand_log.ldf' , SIZE = 8192KB , FILEGROWTH = 65536KB )
