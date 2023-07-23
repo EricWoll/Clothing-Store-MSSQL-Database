@@ -2,7 +2,7 @@
 USE [ClothingStore];
 GO
 
-INSERT INTO [Catagories](catagory_id, catagory_name)
+INSERT INTO [Catagories] (catagory_id, catagory_name)
 	VALUES
 	('becc5d5c1f', 'Men''s Pants'),
 	('097ab2c0c2', 'Men''s Shorts'),
@@ -32,12 +32,12 @@ INSERT INTO [Sizes] (size_id, size_code, price_multiplier)
 
 INSERT INTO [Colors] (color_id, color_code, color_name, price_multiplier)
 	VALUES
-	('0bc3ce828e', 'FF0000' , 'Red', 0),
-	('0beb8e1c03', 'FFA500' , 'Orange', 0),
-	('9a748090c2', '0000FF' , 'Blue', 0),
-	('0567e09dc7', 'FFFFFF' , 'White', 0),
-	('3a6fd3d9be', '808080' , 'Gray', 0),
-	('90f8710822', 'ADD8E6' , 'Light Blue', 0);
+	('0bc3ce828e', 'FF0000', 'Red', 0),
+	('0beb8e1c03', 'FFA500', 'Orange', 0),
+	('9a748090c2', '0000FF', 'Blue', 0),
+	('0567e09dc7', 'FFFFFF', 'White', 0),
+	('3a6fd3d9be', '808080', 'Gray', 0),
+	('90f8710822', 'ADD8E6', 'Light Blue', 0);
 
 INSERT INTO [Item] (item_id, catagory_id, product_id, size_id, color_id)
 	VALUES
