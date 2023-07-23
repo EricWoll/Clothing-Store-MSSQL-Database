@@ -15,38 +15,38 @@ GO
 -- create tables
 CREATE TABLE [Catagories] (
 	catagory_id			VARCHAR(10) PRIMARY KEY NOT NULL,
-	catagory_name		VARCHAR(80),
-	creation_date		DATETIME DEFAULT GETDATE() NOT NULL
+	catagory_name			VARCHAR(80),
+	creation_date			DATETIME DEFAULT GETDATE() NOT NULL
 )
 
 CREATE TABLE [Products] (
 	product_id			VARCHAR(10) PRIMARY KEY NOT NULL,
-	product_name		VARCHAR(80),
+	product_name			VARCHAR(80),
 	brand_name			VARCHAR(40),
 	base_price			FLOAT NOT NULL,
-	creation_date		DATETIME DEFAULT GETDATE() NOT NULL
+	creation_date			DATETIME DEFAULT GETDATE() NOT NULL
 )
 
 CREATE TABLE [Sizes] (
 	size_id				VARCHAR(10) PRIMARY KEY NOT NULL,
 	size_code			VARCHAR(5),
-	price_multiplier	FLOAT NOT NULL
+	price_multiplier		FLOAT NOT NULL
 )
 
 CReate TABLE [Colors] (
 	color_id			VARCHAR(10) PRIMARY KEY NOT NULL,
 	color_code			VARCHAR(6),
 	color_name			VARCHAR(30),
-	price_multiplier	FLOAT NOT NULL
+	price_multiplier		FLOAT NOT NULL
 )
 
 CREATE TABLE [Item] (
-	item_id			VARCHAR(20) PRIMARY KEY NOT NULL,
-	catagory_id		VARCHAR(10) FOREIGN KEY REFERENCES Catagories(catagory_id),
-	product_id		VARCHAR(10) FOREIGN KEY REFERENCES Products(product_id) NOT NULL,
-	size_id			VARCHAR(10) FOREIGN KEY REFERENCES Sizes(size_id),
-	color_id		VARCHAR(10) FOREIGN KEY REFERENCES Colors(color_id),
-	creation_date	DATETIME DEFAULT GETDATE() NOT NULL
+	item_id				VARCHAR(20) PRIMARY KEY NOT NULL,
+	catagory_id			VARCHAR(10) FOREIGN KEY REFERENCES Catagories(catagory_id),
+	product_id			VARCHAR(10) FOREIGN KEY REFERENCES Products(product_id) NOT NULL,
+	size_id				VARCHAR(10) FOREIGN KEY REFERENCES Sizes(size_id),
+	color_id			VARCHAR(10) FOREIGN KEY REFERENCES Colors(color_id),
+	creation_date			DATETIME DEFAULT GETDATE() NOT NULL
 )
 GO
 
